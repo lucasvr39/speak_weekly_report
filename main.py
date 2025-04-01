@@ -12,8 +12,9 @@ from datetime import datetime
 
 
 # Configure logging
-if not os.path.exists("./logs"):
-    os.makedirs("./logs")
+LOG_PATH = os.path.join(os.path.dirname(__file__), "logs")
+if not os.path.exists(LOG_PATH):
+    os.makedirs(LOG_PATH)
 
 log_filename = f"logs/{datetime.now().strftime('%Y%m%d')}.log"
 logging.basicConfig(
