@@ -99,7 +99,7 @@ def execute_query(conn, query):
         cursor.close()
 
 
-if __name__ == "__main__":
+def main() -> None:
     logger.info("Starting process")
 
     try:
@@ -120,3 +120,7 @@ if __name__ == "__main__":
     except Exception as e:
         logger.error(f"Data retrieve and upload process failed: {str(e)}")
         sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
